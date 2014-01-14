@@ -28,7 +28,8 @@ If doing custom mock configs for the kernel, its always
 going to need a noarch.cfg as well 
 
 
-* * *
+Repositories
+------------
 
 repo urls that contain /mirror/ point to pristine upstream
 mirrors ( unmaintained, they will never change )
@@ -38,10 +39,26 @@ repo urls that contain /repo/<target> represent the actual
 repositories that built content is being injected into
 
 
-* * *
 
-Some files that are part of the system:
-* def.cfg
-* logging.ini
-* hints
-* site-defaults.cfg
+System Files
+------------
+
+ * def.cfg
+ * logging.ini
+ * hints
+ * site-defaults.cfg
+
+
+Hints
+-----
+
+There are two ways to add packages to the buildroot, either
+via the hints file or by changing the mock config used for 
+that specific package build. In most cases, err towards 
+using the hints file, since its arch agnostic, version 
+agnostic and mods to it do not leave an extra mock conf 
+that needs to be maintained.
+
+Syntax in the hints file is explained right at the top
+
+
