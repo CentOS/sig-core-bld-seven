@@ -1,0 +1,17 @@
+# All lines starting with a # are ignored
+# format is : rpmname|disttag|list of pkgs, space between each
+xfsdump|.el7|xfsprogs-qa-devel
+git|.el7|libgnome-keyring-devel
+notify-python|.el7|autoconf
+conman|.el7|systemd
+gcc|.el7|glibc-devel.i686 nss-softokn-freebl.i686
+compat-gcc-32|.el7|glibc-devel.i686 nss-softokn-freebl.i686
+compat-gcc-34|.el7|glibc-devel.i686 nss-softokn-freebl.i686
+compat-gcc-44|.el7|glibc-devel.i686 nss-softokn-freebl.i686
+bacula|.el7|tcp_wrappers-devel
+sysstat|.el7|systemd
+memtest86+|.el7|glibc-devel.i686 nss-softokn-freebl.i686
+mcelog|.el7|systemd
+ibacm|.el7|systemd
+grilo-plugins|.el7|libgcrypt-devel
+sac|.el7|jpackage-utils
