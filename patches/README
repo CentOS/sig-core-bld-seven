@@ -1,0 +1,12 @@
+put all package patches in here.
+
+patch name should be :
+<package name>.patch
+or
+<package name>.<arch>.patch
+or
+<package name>-<ver>-<arch>.patch
+<package name>-<ver>-<rel>-<arch>.patch
+
+the patch needs to be generated as a diff -uNr 
+with SPECS/ and SOURCES/ in their own directories.
