@@ -1,0 +1,27 @@
+The upstream tarball for wordlist contains two x86_64 compiled binaries which
+are called during the build process.
+These need to be cleaned before the regular make can succeed.
+
+$ file wordlist/scowl/src/{deaccent,find-accented}
+wordlist/scowl/src/deaccent:      ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=f54e47882388586dee1120ace3ad4d81a803ad0d, not stripped
+wordlist/scowl/src/find-accented: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=ce52f29219f1db61467f695fa53e88aaeb077e4b, not stripped
+
+Signed-off-by: Andreas Thienemann <andreas@bawue.net>
+
+--- 
+diffstat:
+ hunspell-en.spec |    1 +
+ 1 file changed, 1 insertion(+)
+
+
+diff -up hunspell-en/SPECS/hunspell-en.spec.orig hunspell-en/SPECS/hunspell-en.spec
+--- hunspell-en/SPECS/hunspell-en.spec.orig	2014-02-04 17:46:15.205342341 +0100
++++ hunspell-en/SPECS/hunspell-en.spec	2014-02-04 17:46:43.795203168 +0100
+@@ -65,6 +65,7 @@ UK English hunspell dictionaries
+ %patch7 -p1 -b .en_IE
+
+ %build
++make clean
+ make
+ cd scowl/speller
+ make hunspell
